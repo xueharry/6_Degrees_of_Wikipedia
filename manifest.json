@@ -1,0 +1,16 @@
+{
+  "manifest_version": 2,
+
+  "name": "6 Degrees of Wikipedia",
+  "description": "This extension allows a user to play 6 degrees of Wikipedia using a user-selected topic",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "6degreesofwikipedia.png",
+    "default_popup": "popup.html",
+    "default_title": "Click here!"
+  },
+  "permissions": [
+    "activeTab"
+  ]
+}
