@@ -16,6 +16,16 @@ function getGoalTerm(){
     // Set badge text to 0
     // TODO: Set tabId as well?
     chrome.browserAction.setBadgeText({text:"0"});
+
+    // Change popup to game.html
+    chrome.browserAction.setPopup({popup:"game.html"});
+
+    // Close popup since the template change is not reflected unless
+    // the popup is closed and reopened again
+    // TODO: Figure out if there is an alternative to this
+    window.close();
+
+
 }
 
 // When the popup has loaded
