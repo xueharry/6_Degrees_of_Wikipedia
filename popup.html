@@ -13,7 +13,7 @@
         font-size: 100%;
       }
       #status {
-        /* avoid an excessively wide status text */
+         avoid an excessively wide status text 
         white-space: pre;
         text-overflow: ellipsis;
         overflow: hidden;
@@ -30,7 +30,15 @@
     <script src="popup.js"></script>
   </head>
   <body>
-    <div id="status"></div>
+    <div>6 Degrees of Wikipedia</div>
+    <div>
+      <form>
+        <br>
+        Enter goal term:<br>
+        <input type="text" name="term">
+        <input type="submit" value="Submit">
+      </form>
+    </div>
     <img id="image-result" hidden>
   </body>
 </html>
