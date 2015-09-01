@@ -1,20 +1,22 @@
 // URL to generate random Wikipedia page
 var url = "https://en.wikipedia.org/wiki/Special:Random";
-var gameStarted = false;
+
+// Get background page
+var background = chrome.extension.getBackgroundPage();
 
 function getGoalTerm(){
     // Cancel form submit
     event.preventDefault();
 
     // Get the goal term that the user has entered
-    goalTerm = document.getElementById('goalterm').value;
+    background.goalTerm = document.getElementById('goalterm').value;
 
     // TODO: Modularize this more cleanly
     startGame();
 }
 
 function startGame(){
-    // Redirect to random wikiipedia page
+    // Redirect to random wikipedia page
     // TODO: Ensure that the user stays only within Wikipedia?
     chrome.tabs.update(null, {url:url});
 
@@ -30,11 +32,10 @@ function startGame(){
     window.close();
 }
 
-
-window.addEventListener('load', function(evt) {
-    if (!gameStarted){
+window.addEventListener('load', function() {
+    if (!background.gameStarted){
         // Handle term form submit event
         document.getElementById('termform').addEventListener('submit', getGoalTerm);
-        gameStarted = true;
+        background.gameStarted = true;
     }
 })
