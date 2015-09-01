@@ -12,5 +12,14 @@
   },
   "permissions": [
     "activeTab"
+  ],
+  "background": {
+    "scripts": ["js/background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://en.wikipedia.org/*"],
+      "js": ["js/contentscript.js"] 
+    }
   ]
 }
