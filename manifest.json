@@ -21,5 +21,6 @@
       "matches": ["https://en.wikipedia.org/*"],
       "js": ["js/contentscript.js"] 
     }
-  ]
+  ],
+  "web_accessible_resources": ["js/click.js"]
 }

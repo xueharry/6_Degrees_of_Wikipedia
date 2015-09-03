@@ -9,3 +9,9 @@ function resetVars (){
 	clicks = 0;
 }
 
+// Inject content script every time the browser URL is updated
+chrome.tabs.onUpdated.addListener(function() {
+    chrome.tabs.executeScript(null, { file: "js/contentscript.js" });
+  });   
+});
+

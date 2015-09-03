@@ -7,7 +7,7 @@ window.onload = function() {
 
 	// Reset game if "Clear Game" clicked
 	document.getElementById('clear_game').addEventListener('click', resetGame);
-}
+};
 
 function resetGame() {
 	// Set badge text to empty string
