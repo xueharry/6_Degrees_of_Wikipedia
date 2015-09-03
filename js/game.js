@@ -2,7 +2,8 @@
 var background = chrome.extension.getBackgroundPage();
 
 window.onload = function() {
-	document.getElementById("current_clicks").innerHTML = background.clicks.toString();
+	// TODO: Fix this
+    document.getElementById("current_clicks").innerHTML = background.clickCounter.toString();
 	document.getElementById("current_term").innerHTML = "<b>" + background.goalTerm + "</b>";
 
 	// Reset game if "Clear Game" clicked

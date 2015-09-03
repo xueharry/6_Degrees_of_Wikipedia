@@ -1,10 +1,7 @@
-// Inject script into page
-var s = document.createElement('script');
+function clicked() {
+	console.log('Link clicked!');
+}
 
-s.src = chrome.extension.getURL('js/click.js');
-s.onload = function() {
-    this.parentNode.removeChild(this);
-};
-(document.head||document.documentElement).appendChild(s);
+document.body.addEventListener('click', clicked, false);			
 
 console.log("Content Script injected");

@@ -19,7 +19,8 @@
   "content_scripts": [
     {
       "matches": ["https://en.wikipedia.org/*"],
-      "js": ["js/contentscript.js"] 
+      "js": ["js/contentscript.js"], 
+      "run_at": "document_end"
     }
   ],
   "web_accessible_resources": ["js/click.js"]

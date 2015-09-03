@@ -37,5 +37,6 @@ window.addEventListener('load', function() {
         // Handle term form submit event
         document.getElementById('termform').addEventListener('submit', getGoalTerm);
         background.gameStarted = true;
+        background.clickCounter = 0;
     }
 })
