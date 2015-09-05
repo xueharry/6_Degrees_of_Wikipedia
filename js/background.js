@@ -24,9 +24,9 @@ chrome.runtime.onMessage.addListener(
 			
 			if (gameStarted) {
 				// Check if goalTerm has been found
-				if (request.link.toLowerCase() == goalTerm.toLowerCase()){
+				if (request.link.toLowerCase().indexOf(goalTerm.toLowerCase()) >= 0){
 					updateCounters();
-					alert("You won!");
+					alert("You won!" + ' You found "' + goalTerm + '" in ' + clickCounter.toString() + " clicks.");
 				}
 				updateCounters();
 			}
