@@ -2,7 +2,6 @@
 var background = chrome.extension.getBackgroundPage();
 
 window.onload = function() {
-	// TODO: Fix this
     document.getElementById("current_clicks").innerHTML = background.clickCounter.toString();
 	document.getElementById("current_term").innerHTML = "<b>" + background.goalTerm + "</b>";
 
@@ -22,6 +21,5 @@ function resetGame() {
 
     // Close popup since the template change is not reflected unless
     // the popup is closed and reopened again
-    // TODO: Figure out if there is an alternative to this
     window.close();
 }

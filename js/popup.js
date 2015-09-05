@@ -11,13 +11,11 @@ function getGoalTerm(){
     // Get the goal term that the user has entered
     background.goalTerm = document.getElementById('goalterm').value;
 
-    // TODO: Modularize this more cleanly
     startGame();
 }
 
 function startGame(){
     // Redirect to random wikipedia page
-    // TODO: Ensure that the user stays only within Wikipedia?
     chrome.tabs.update(null, {url:url});
 
     // Set badge text to 0
@@ -28,7 +26,6 @@ function startGame(){
 
     // Close popup since the template change is not reflected unless
     // the popup is closed and reopened again
-    // TODO: Figure out if there is an alternative to this
     window.close();
 }
 
