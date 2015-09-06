@@ -25,9 +25,8 @@ function resetGame() {
     // Reset variables
     resetVars();
 
-    // Close popup since the template change is not reflected unless
-    // the popup is closed and reopened again
-    window.close();
+    // Reset extension
+    chrome.runtime.reload();
 }
 
 // Listen for link clicked message

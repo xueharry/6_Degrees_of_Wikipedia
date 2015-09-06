@@ -36,4 +36,4 @@ window.addEventListener('load', function() {
         background.gameStarted = true;
         background.clickCounter = 0;
     }
-})
+});
