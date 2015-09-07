@@ -36,14 +36,18 @@ chrome.runtime.onMessage.addListener(
 			sendResponse({received: "Link received: " + request.link});
 			
 			if (gameStarted) {
-				// Check if goalTerm has been found
-				if (request.link.toLowerCase().indexOf(goalTerm.toLowerCase()) >= 0){
-					updateCounters();
-					alert("You won!" + ' You found "' + goalTerm + '" in ' + clickCounter.toString() + " clicks.");
+				updateCounters();
+
+				// Check for loss
+				if (clickCounter >= 6 && request.link.toLowerCase().indexOf(goalTerm.toLowerCase()) < 0) {
+					alert("You lost!" + ' You did not find "' + goalTerm + '" within 6 clicks.');
 					resetGame();
 				}
-				else {
-					updateCounters();
+
+				// Check if goalTerm has been found
+				else if (request.link.toLowerCase().indexOf(goalTerm.toLowerCase()) >= 0){
+					alert("You won!" + ' You found "' + goalTerm + '" in ' + clickCounter.toString() + " clicks.");
+					resetGame();
 				}
 			}
 		}
