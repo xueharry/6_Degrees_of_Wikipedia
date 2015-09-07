@@ -8,6 +8,6 @@ document.body.addEventListener('click', function(e) {
 	chrome.runtime.sendMessage({link: linkTitle}, function(response){
 		console.log(response.received);
 	});
-	}, false);			
+}, false);			
 
 console.log("Content Script injected");

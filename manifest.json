@@ -10,6 +10,10 @@
     "default_popup": "home.html",
     "default_title": "Click to play"
   },
+
+  "icons": {
+    "128": "img/icon_128.png"
+  },
   "permissions": [
     "activeTab"
   ],

@@ -24,6 +24,8 @@ function startGame(){
     // Change popup to game.html
     chrome.browserAction.setPopup({popup:"game.html"});
 
+    background.gameStarted = true;
+
     // Close popup since the template change is not reflected unless
     // the popup is closed and reopened again
     window.close();
@@ -33,7 +35,6 @@ window.addEventListener('load', function() {
     if (!background.gameStarted){
         // Handle term form submit event
         document.getElementById('termform').addEventListener('submit', getGoalTerm);
-        background.gameStarted = true;
         background.clickCounter = 0;
     }
 });
