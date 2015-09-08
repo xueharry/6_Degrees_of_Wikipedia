@@ -29,5 +29,6 @@
       "run_at": "document_end"
     }
   ],
-  "web_accessible_resources": ["js/click.js"]
+  "web_accessible_resources": ["js/click.js"],
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'"
 }
