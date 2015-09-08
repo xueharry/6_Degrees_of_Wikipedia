@@ -11,6 +11,9 @@ function getGoalTerm(){
     // Get the goal term that the user has entered
     background.goalTerm = document.getElementById('goalterm').value;
 
+    // Push goalTerm to Google Analytics
+    _gaq.push(['_trackEvent', background.goalTerm, 'goalTerm submitted']);
+
     startGame();
 }
 
@@ -28,7 +31,7 @@ function startGame(){
 
     // Close popup since the template change is not reflected unless
     // the popup is closed and reopened again
-    window.close();
+    //window.close();
 }
 
 window.addEventListener('load', function() {
