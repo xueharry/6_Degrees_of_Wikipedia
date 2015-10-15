@@ -1,6 +1,9 @@
 # 6_Degrees_of_Wikipedia
 A simple chrome extension that enables a user to play the 6 Degrees of Wikipedia game with a user-selected topic and a randomized initial page.
 
+# Installation
+Download from the [Chrome Web Store] (https://chrome.google.com/webstore/detail/6-degrees-of-wikipedia/ffcognhmlfacpmllbbpbkhhachemlhfa)
+
 # Manual Installation
 1. Clone the repository:
 ```git clone https://github.com/xueharry/6_Degrees_of_Wikipedia.git```
